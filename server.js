@@ -72,7 +72,7 @@ function gateKeeper(req, res, next) {
 
   const pass = arrayQuery.pass;
  
-  req.user = USERS.find((usr,index) => usr.userName === user && usr.password === pass);
+  req.user = USERS.find((login) => login.userName === user && login.password === pass);
   
   next();
 }
