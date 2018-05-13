@@ -1,9 +1,11 @@
 const express = require('express');
 // you'll need to use `queryString` in your `gateKeeper` middleware function
 const queryString = require('query-string');
-
+const morgan = require('morgan');
 
 const app = express();
+
+app.use(morgan('common'));
 
 // For this challenge, we're hard coding a list of users, because
 // we haven't learned about databases yet. Normally, you'd store
